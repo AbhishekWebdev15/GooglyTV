@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GooglyTV</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="assets/css/normalize4.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/body.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <link rel="icon" href="assets/images/main logo.png">
+
+  <style>
+    .glyphicon {
+      font-size: 20px;
+      color: #fff;
+    }
+  </style> {
+
+}
+</head>
+<body>
+
+  <nav>
+    <div id="logo" class="col-md-8 col-sm-9 col-xs-9">
+      <img src="assets/images/main_logo_big.png" alt="Logo" height="50" width="110" style="margin-right:10px;">
+      <a href="#livetv" class="link">Watch Live TV</a>
+      <a href="#popular_vids" class="link">Popular Videos</a>
+      <a href="#" class="link">About Us</a>
+    </div>
+    <div id="login" class="col-md-4 col-sm-3 col-xs-3">
+      <div class="dropdown">
+        <i class="fa fa-user fa-2x user"></i>
+        <div class="user_descr dropdown_content">
+          <i class="fa fa-user fa-5x" style="color:#555;"></i>
+          <span id="name">Abhishek Biswas</span>
+          <span id="email">abhishek.blogger05@gmail.com</span>
+          <hr style="margin:5px;">
+          <div style="background-color:#f2f2f2;height:50px;padding:10px;"><a href="#">My Profile</a></div>
+          <hr style="margin:5px;">
+          <div style="background-color:#f2f2f2;height:50px;padding:10px;"><a href="#">Upload Video</a></div>
+          <hr style="margin:5px;">
+          <div style="background-color:#f2f2f2;height:50px;padding:10px;"><a href="#">Log Out</a></div>
+        </div>
+      </div>
+      <button id="signup">Sign up</button>
+      <button id="log_in">Log in</button>
+    </div>
+  </nav>
+
+  <div id="social">
+    <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+    <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+  </div>
+
+  <div class="container-fluid wrapper">
+
+    <div id="header">
+      <div id="channel" class="col-md-6 col-sm-6 col-xs-6">
+        <div class="dropdown">
+          <div id="select_channel">Select Channel</div>
+          <div id="videos" class="dropdown_content">
+            <div class="channel_list">Channel</div>
+            <div class="channel_list">Channel</div>
+            <div class="channel_list">Channel</div>
+            <div class="channel_list">Channel</div>
+            <div class="channel_list">Channel</div>
+            <div class="channel_list">Channel</div>
+          </div>  
+        </div>
+        
+      </div>
+      
+      <span class="col-md-6 col-sm-6 col-xs-6" id="search_submit">
+        <input type="text" name="search" placeholder="Search.." id="search">
+        <button>
+          <i class="fa fa-search"></i>
+        </button>
+      </span>
+    </div>
+    
+    <div id="livetv"></div>
+
+    <!-- ################################ -->
+
+    <div id="player" class="container-fluid">
+
+      <div id="video_section" class="col-md-8">
+
+        <div id="channel_descr">
+          <div></div>
+          <h4>Channel Name</h4>
+        </div>
+
+        <div id="video_logo">
+        </div>
+
+        <div id="vid_wrapper">
+
+          <div id="vid">
+
+            <div id="videocontainer" data-fullscreen="false">
+
+              <video id="video" preload="metadata" poster="assets/images/poster.jpg" >
+                <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4">
+                </video>
+
+                <ul id="video-controls" class="controls">
+
+                  <li> <button type="button" class="btn btn-link" style="outline:none;" onclick="playpause()">
+                    <span class="glyphicon glyphicon-play" id="playpause"></span>
+                  </button></li>
+                  <li class="progress">
+                    <progress id="progress" value="0" min="0">
+                      <span id="progress-bar"></span>
+                    </progress>
+                  </li>
+                  <li><button type="button" class="btn btn-link" style="outline:none;" onclick="vol_toggle()">
+                    <span class="glyphicon glyphicon-volume-up" id="volbtn"></span>
+                  </button>
+                </li>
+                <li><input id="vol-control" type="range" min="0" max="100" step="1"></li>
+                <li><button id="fs" type="button" class="btn btn-link" style="outline:none;">
+                  <span class="glyphicon glyphicon-resize-small" id="scrnbtn"></span>
+                </button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="vid_name" class="col-md-6">
+          <h3>WORLD'S MOST AWESOME RACE</h3>
+          <h5>Uploader Name</h5>
+        </div>
+
+        <div id="views" class="col-md-6">
+          <h3>32 Views</h3>
+          <i class="fa fa-thumbs-up fa-2x"></i>                    
+          <i class="fa fa-thumbs-down fa-2x" style="margin-left:50px;"></i>                    
+        </div>
+      </div><!-- #video_section -->
+
+
+      <div id="upcoming" class="col-md-4">
+        <div id="upcoming_head"><h3>Upcoming Videos</h3></div>
+        
+        <div id="upcoming_vids">
+          <div>
+          <img src="assets/images/hqdefault.jpg" alt="screenshot" style="display:inline-block;">
+          <h5 style="display:inline-block;">Best SmartPhone | </h5>
+          <h5 style="display:inline;">03:53</h5>
+        </div>
+        <div>
+          <img src="assets/images/hqdefault.jpg" alt="screenshot" style="display:inline-block;">
+          <h5 style="display:inline-block;">Best SmartPhone | </h5>
+          <h5 style="display:inline;">03:53</h5>
+        </div>
+        <div>
+          <img src="assets/images/hqdefault.jpg" alt="screenshot" style="display:inline-block;">
+          <h5 style="display:inline-block;">Best SmartPhone | </h5>
+          <h5 style="display:inline;">03:53</h5>
+        </div>
+        <div>
+          <img src="assets/images/hqdefault.jpg" alt="screenshot" style="display:inline-block;">
+          <h5 style="display:inline-block;">Best SmartPhone | </h5>
+          <h5 style="display:inline;">03:53</h5>
+        </div>
+        <div>
+          <img src="assets/images/hqdefault.jpg" alt="screenshot" style="display:inline-block;">
+          <h5 style="display:inline-block;">Best SmartPhone | </h5>
+          <h5 style="display:inline;">03:53</h5>
+        </div>
+        <div>
+          <img src="assets/images/hqdefault.jpg" alt="screenshot" style="display:inline-block;">
+          <h5 style="display:inline-block;">Best SmartPhone | </h5>
+          <h5 style="display:inline;">03:53</h5>
+        </div>
+        <div>
+          <img src="assets/images/hqdefault.jpg" alt="screenshot" style="display:inline-block;">
+          <h5 style="display:inline-block;">Best SmartPhone | </h5>
+          <h5 style="display:inline;">03:53</h5>
+        </div>
+        <div>
+          <img src="assets/images/hqdefault.jpg" alt="screenshot" style="display:inline-block;">
+          <h5 style="display:inline-block;">Best SmartPhone | </h5>
+          <h5 style="display:inline;">03:53</h5>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="popular_vids">
+      <h3>Popular Videos</h3>
+      <hr>
+
+      <div class="container-fluid">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div>
+            <img src="assets/images/hqdefault.jpg" alt="Screen">
+            <h5>World's Lorem Ipsum</h5><br>
+            <p>03:53</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div>
+            <img src="assets/images/hqdefault.jpg" alt="Screen">
+            <h5>World's Lorem Ipsum</h5><br>
+            <p>03:53</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div>
+            <img src="assets/images/hqdefault.jpg" alt="Screen">
+            <h5>World's Lorem Ipsum</h5><br>
+            <p>03:53</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div>
+            <img src="assets/images/hqdefault.jpg" alt="Screen">
+            <h5>World's Lorem Ipsum</h5><br>
+            <p>03:53</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div>
+            <img src="assets/images/hqdefault.jpg" alt="Screen">
+            <h5>World's Lorem Ipsum</h5><br>
+            <p>03:53</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div>
+            <img src="assets/images/hqdefault.jpg" alt="Screen">
+            <h5>World's Lorem Ipsum</h5><br>
+            <p>03:53</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div>
+            <img src="assets/images/hqdefault.jpg" alt="Screen">
+            <h5>World's Lorem Ipsum</h5><br>
+            <p>03:53</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div>
+            <img src="assets/images/hqdefault.jpg" alt="Screen">
+            <h5>World's Lorem Ipsum</h5><br>
+            <p>03:53</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div>
+            <img src="assets/images/hqdefault.jpg" alt="Screen">
+            <h5>World's Lorem Ipsum</h5><br>
+            <p>03:53</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div>
+            <img src="assets/images/hqdefault.jpg" alt="Screen">
+            <h5>World's Lorem Ipsum</h5><br>
+            <p>03:53</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div>
+            <img src="assets/images/hqdefault.jpg" alt="Screen">
+            <h5>World's Lorem Ipsum</h5><br>
+            <p>03:53</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div>
+            <img src="assets/images/hqdefault.jpg" alt="Screen">
+            <h5>World's Lorem Ipsum</h5><br>
+            <p>03:53</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <footer>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li>|</li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+      <div id="foot_logo">
+        <img src="assets/images/main_logo_big.png" alt="Logo" height="50" width="110">
+      </div>
+    </footer>
+
+    <a href="#" class="scrollup"><i class="fa fa-arrow-up fa-2x" style="color:#e5271d;"></i></a>
+
+  </div> <!-- /.container-fluid -->
+
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/video-player.js"></script>
+  <script>
+    function playpause()
+    {
+
+      btn=document.getElementById("playpause");
+
+      if(btn.className=="glyphicon glyphicon-play")
+      {
+        btn.className="glyphicon glyphicon-pause";
+      }
+      else
+      {
+        btn.className="glyphicon glyphicon-play";
+      }
+
+    }
+
+
+    function vol_toggle()
+    {
+
+      btn=document.getElementById("volbtn");
+
+      if(btn.className=="glyphicon glyphicon-volume-up")
+      {
+        btn.className="glyphicon glyphicon-volume-off";
+      }
+      else
+      {
+        btn.className="glyphicon glyphicon-volume-up";
+      }
+
+    }
+
+    function scrn_toggle()
+    {
+
+      btn=document.getElementById("scrnbtn");
+
+      if(btn.className=="glyphicon glyphicon-resize-full")
+      {
+        btn.className="glyphicon glyphicon-resize-small";
+      }
+      else
+      {
+        btn.className="glyphicon glyphicon-resize-full";
+      }
+
+    }
+  </script>
+</body>
+</html>

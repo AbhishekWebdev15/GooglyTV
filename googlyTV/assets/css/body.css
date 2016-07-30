@@ -1,0 +1,203 @@
+.wrapper {
+  max-width: 1585px;
+}
+
+#header {
+  margin-top: 55px;
+  padding: 10px 0;
+  height: 70px;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 1.5em;
+}
+
+#videos {
+  background-color: #f2f2f2;
+  font-size: 0.8em;
+  font-weight: bold;
+  z-index: 90;
+}
+
+#videos .channel_list {
+  font-size: 1em;
+}
+
+#select_channel {
+  background-color: #e5271d;
+  padding: 5px;
+  width: 170px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1.1em;
+  margin-top: 8px;
+}
+
+#videos {
+  width: 1150px;
+  height: 140px;
+}
+
+.channel_list {
+  padding-top: 40px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 30px;
+  margin-top: 7px;
+  height: 100px;
+  width: 150px;
+  background-color: #e5271d;
+  color:#fff;
+}
+
+span#search_submit {
+  text-align: right;
+  padding: 5px;
+}
+
+span#search_submit input {
+  padding: 10px;
+  width: 300px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+span#search_submit input:focus {
+  width: 70%;
+}
+
+@media screen and (max-width:1120px) {
+  span#search_submit input {
+    width: 150px;
+  }
+}
+
+span#search_submit button {
+  padding: 10px 15px;
+  color:#fff;
+  background-color: #e5271d;
+}
+
+div#videos {
+  padding: 10px 15px;
+}
+
+div#videos h3 {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+#livetv {
+  position: absolute;
+  top: 100px;
+}
+
+/* ##################### */
+
+#player {
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 20px;
+  height: 740px;
+}
+
+#video_section {
+  padding: 0;
+  background-color: #;
+  height: 544px;
+}
+
+#channel_descr div {
+  height:50px;
+  width:50px;
+  background-color:red;
+  display:inline-block;
+}
+
+#channel_descr h4 {
+  display:inline-block;
+  position: relative;
+  bottom:17px;
+  padding-left: 10px;
+}
+
+#video_logo {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  position: absolute;
+  right:92px;
+  top:95px;
+}
+
+#vid_wrapper {
+  background-color: #444;
+}
+
+#vid {
+  height: 480px;
+  width: 854px;
+  margin: 0 auto;
+  background-color: #555;
+}
+
+#views {
+  text-align: right;
+}
+
+#upcoming {
+  margin-top: 77px;
+  color:#f2f2f2;
+  background-color: #222;
+  height: 625px;
+}
+
+#upcoming_vids {
+  height: 625px;
+  width: 490px;
+  overflow: scroll;
+}
+
+#upcoming_head {
+  position: absolute;
+  top:-80px;
+  color:#222;
+}
+
+#popular_vids {
+  margin-top: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+#popular_vids h3 {
+  padding: 10px;
+  padding-top: 0;
+}
+
+#popular_vids>.container-fluid {
+  background-color: #fff;
+}
+
+#popular_vids>.container-fluid .col-md-4 div {
+  text-align: center;
+  padding-top: 5px;
+  -webkit-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+
+#popular_vids>.container-fluid .col-md-4 div:hover {
+  background-color: #e9ebee;
+  border-radius: 5px;
+}
+
+#popular_vids>.container-fluid .col-md-4 div p {
+  margin-bottom: 0;
+  position: relative;
+  top: -30px;
+}
+
+#popular_vids>.container-fluid .col-md-4 div img {
+  height: 120px;
+}
