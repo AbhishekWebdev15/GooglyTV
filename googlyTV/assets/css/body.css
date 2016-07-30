@@ -154,7 +154,15 @@ div#videos h3 {
 #upcoming_vids {
   height: 625px;
   width: 490px;
-  overflow: scroll;
+  overflow-y: scroll;
+}
+
+#upcoming_vids div {
+  padding: 7px 0;
+}
+
+#upcoming_vids div img {
+  padding-right: 10px;
 }
 
 #upcoming_head {
