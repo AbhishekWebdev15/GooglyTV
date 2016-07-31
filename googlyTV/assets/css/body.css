@@ -3,9 +3,8 @@
 }
 
 #header {
-  margin-top: 55px;
-  padding: 10px 0;
-  height: 70px;
+  height: 102px;
+  padding: 40px 0;
   border-radius: 5px;
   background-color: #fff;
   font-size: 1.5em;
@@ -47,6 +46,13 @@
   width: 150px;
   background-color: #e5271d;
   color:#fff;
+  -webkit-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.channel_list:hover {
+  background-color: pink;
 }
 
 span#search_submit {
@@ -159,6 +165,13 @@ div#videos h3 {
 
 #upcoming_vids div {
   padding: 7px 0;
+  -webkit-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+#upcoming_vids div:hover {
+  background-color: #777;
 }
 
 #upcoming_vids div img {

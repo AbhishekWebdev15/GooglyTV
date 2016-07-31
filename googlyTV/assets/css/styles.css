@@ -23,8 +23,7 @@ a:hover, a:focus {
 	text-decoration:underline;
 }
 div#videocontainer{
-	width: 1280px;
-	width:100%;
+	width: 854px;
 	height:auto;
 	margin:20px 0 0;
 	margin:1.25rem 0 0;
