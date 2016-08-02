@@ -1,0 +1,73 @@
+body {
+  background-color: #ebeeee;
+}
+
+#wrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 90px;
+  text-align: center;
+}
+
+form {
+  margin: 0 auto;
+  width: 600px;
+  text-align: left;
+}
+
+form input[type=text], form input[type=password] {
+  border: 1px solid #e5271d;
+  margin-top: 20px;
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+form input:focus {
+  outline: none;
+  border: 2px solid red;
+  -webkit-box-shadow: 5px 5px 5px 1px #e5271d;
+  box-shadow: 5px 5px 5px 1px #e5271d;
+}
+
+form * {
+  margin-top: 20px;
+}
+
+form select {
+  margin-top: 0;
+}
+
+form input[type=checkbox] {
+  margin-top: 18px;
+}
+
+#captcha {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#captcha_image {
+  display: block;
+  height: 50px;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: #555;
+}
+
+#captcha input {
+  margin-top: 10px;
+  width: 200px;
+  height: 30px;
+  border: 1px solid #e5271d;
+}
+
+form input[type=submit] {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  background-color: #e5271d;
+  color: #fff;
+  width: 600px;
+  padding: 10px;
+}

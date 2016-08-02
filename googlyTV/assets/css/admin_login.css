@@ -1,0 +1,80 @@
+body {
+  background-color: #ebeeee;
+}
+
+* input {
+  padding: 5px;
+}
+
+#wrapper {
+  padding-top: 50px;
+  margin-top: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#logo_body {
+  box-shadow: 0px 0px 7px #e5271d;
+  margin-bottom: 40px;
+}
+
+#main_form {
+  width: 380px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#main_form form {
+  font-size: 1.2em;
+  margin-top: 30px;
+}
+
+#main_form form input[type=text], 
+#main_form form input[type=password] {
+  margin: 10px 0 10px 0;
+  width: 380px;
+  height: 40px;
+  border: 1px solid #e5271d;
+  border-radius: 5px;
+}
+
+#main_form form input:focus {
+  outline: none;
+  border: 2px solid red;
+  -webkit-box-shadow: 5px 5px 5px 1px #e5271d;
+  box-shadow: 5px 5px 5px 1px #e5271d;
+}
+
+#captcha {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#captcha i {
+  margin-top: 10px;
+}
+
+#captcha_image {
+  display: block;
+  height: 50px;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: #555;
+}
+
+#captcha input {
+  margin-top: 10px;
+  width: 200px;
+  height: 30px;
+  border: 1px solid #e5271d;
+}
+
+form input[type=submit] {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  background-color: #e5271d;
+  color: #fff;
+  width: 380px;
+  padding: 10px;
+}
